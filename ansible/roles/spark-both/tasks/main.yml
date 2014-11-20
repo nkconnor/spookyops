@@ -1,5 +1,5 @@
 ---
 
-- name: Setup spark-worker startup conf
-  template: src=sparkworker.conf dest=/etc/init/ owner=root group=root mode=0644
-  tags: spark-worker
+- name: Setup spark-both startup conf
+  template: src=sparkboth.conf dest=/etc/init/ owner=root group=root mode=0644
+  tags: spark-both
