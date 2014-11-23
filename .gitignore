@@ -1,0 +1,27 @@
+*.log
+
+# Eclipse specific
+.pmd
+.classpath
+.project
+.settings/
+
+# IntelliJ-IDEA specific
+*.iml
+.idea/
+.idea_modules/
+
+#Misc
+temp
+**/temp
+foo
+
+#aws key
+**/rootkey.csv
+
+#spark deployment and autoscaling scripts
+**/inventories0/
+**/inventories1/
+**/inventories2/
+**/inventories3/
+**/inventories4/
