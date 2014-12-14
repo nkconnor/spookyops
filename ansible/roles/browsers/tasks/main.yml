@@ -10,7 +10,7 @@
   tags: java
 
 - name: Extract phantomjs archive
-  unarchive: src=phantomjs-1.9.7-linux-x86_64.tar.bz2 dest=/home/ubuntu
+  unarchive: src=phantomjs-1.9.8-linux-x86_64.tar dest=/home/ubuntu
   tags: browsers
 
 - name: Make dir /usr/lib/phantomjs/bin
@@ -18,13 +18,5 @@
   tags: browsers
 
 - name: Copy phantomjs binary to /usr/lib/phantomjs/bin
-  command: cp /home/ubuntu/phantomjs-1.9.7-linux-x86_64/bin/phantomjs /usr/lib/phantomjs/bin creates=/usr/lib/phantomjs/bin/phantomjs
+  command: cp /home/ubuntu/phantomjs-1.9.8-linux-x86_64/bin/phantomjs /usr/lib/phantomjs/bin creates=/usr/lib/phantomjs/bin/phantomjs
   tags: browsers
-
-#- name: Extract phantomjs archive
-#  unarchive: src=phantomjs-1.9.7-linux-x86_64.tar.bz2 dest=/home/ubuntu
-#  tags: browsers
-#
-#- name: Copy phantomjs binary to /usr/local/bin
-#  command: cp /home/ubuntu/phantomjs-1.9.7-linux-x86_64/bin/phantomjs /usr/local/bin creates=/usr/local/bin/phantomjs
-#  tags: browsers
