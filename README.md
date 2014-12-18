@@ -54,7 +54,7 @@ http://<Spark master's public IP/DNS>:8080/
 
 If you see the following Spark-master UI indicating at least 1 worker, your installation is successful:
 
-PIC
+![Spark-master UI](http://i.imgur.com/T47cgf2.png)
 
 Remember your Spark-master URL as you will use it to deploy all Spark applications.
 
@@ -62,7 +62,7 @@ Remember your Spark-master URL as you will use it to deploy all Spark applicatio
 
 The provided Ansible script is only tested on Ubuntu, support for other platforms will be added upon request.
 
-Ansible can't be used to deploy locally (against the machine running the deployment script). This feature is deliberately omitted to discourage changing environment of terminals.
+Ansible can't be used to deploy locally (to the machine itself running the script). This feature is deliberately omitted to avoid catastrophic changes to your personal computer.
 
 >! The main deployment scripts do many things upon one tap, namely:
 
@@ -180,7 +180,7 @@ That's it! Now you have 4 options:
 
 ISpooky is an interactive query/visualization UI on top of SpookyStuff & IPython, it allows you to improvise queries and other Spark programs in your browser:
 
-PIC
+![ISpooky-notebook UI](http://i.imgur.com/gSQw6Ab.png)
 
 ISpooky JAR can be downloaded directly or compiled from source code:
 
@@ -199,7 +199,7 @@ MAVEN_OPTS="-Xmx2g -XX:MaxPermSize=512M -XX:ReservedCodeCacheSize=512m" mvn inst
 cd ../ISpooky
 MAVEN_OPTS="-Xmx2g -XX:MaxPermSize=512M -XX:ReservedCodeCacheSize=512m" mvn install
 ```
-This will generate an uber JAR under `ISPooky/shell/target/scala-2.10` which will serve as the backend of the UI. A new IPython profile has to be created to enable it to be linked to the browser:
+This will generate an uber JAR under `ISPooky/shell/target/scala-2.10` which will serve as the backend server. A new IPython profile has to be created to enable it to be linked to IPython UI:
 
 ###### create a IPython profile
 
@@ -242,7 +242,7 @@ c.NotebookApp.port = 8888
 ipython notebook --profile spooky
 ```
 
-Go to:
+Then go to:
 
 ```
 http://<Spark master's public IP/DNS>:8888/
@@ -250,5 +250,8 @@ http://<Spark master's public IP/DNS>:8888/
 
 And create a new notebook. If you can run examples without error in command line or browser, your installation is successful:
 
-PIC
+![ISpooky dir](http://i.imgur.com/BNGh1j8.png)
 
+###Where to start from here?
+
+...to be continue
