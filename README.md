@@ -64,7 +64,7 @@ The provided Ansible script is only tested on Ubuntu, support for other platform
 
 Ansible can't be used to deploy locally (to the machine itself running the script). This feature is deliberately omitted to avoid catastrophic changes to your personal computer.
 
->! The main deployment scripts do many things upon one tap, namely:
+> The main deployment scripts do many things upon one tap, namely:
 
 - [x] upgrade all packages to latest version
 - [x] install utility packages on all machines
