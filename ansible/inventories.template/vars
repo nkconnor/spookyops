@@ -1,0 +1,13 @@
+[spark:children]
+spark-master
+spark-worker
+
+[spark:vars]
+spark_master_dns=<...master public dns here...>
+spark_master=spark://{{spark_master_dns}}:7077
+
+[spark-master]
+<...master public dns here...>
+
+[spark-worker]
+<...worker public dns here...>

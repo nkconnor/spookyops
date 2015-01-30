@@ -10,3 +10,7 @@
 - name: install ipython
   pip: name=ipython[notebook]
   tags: ipython
+
+- name: copy profile config file to ipython root directory
+  template: src=profile_spooky.template dest=/home/ubuntu/ owner=ubuntu group=ubuntu
+  tags: spark-worker
