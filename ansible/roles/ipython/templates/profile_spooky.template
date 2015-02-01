@@ -1,8 +1,3 @@
-import os
-
-os.environ['AWS_ACCESS_KEY_ID'] = 'AKIAJGRVUS7DEFXICUGQ'
-os.environ['AWS_SECRET_ACCESS_KEY'] = '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'
-
 SPARK_HOME = os.environ['SPARK_HOME']
 GIT_HOME = '/home/ubuntu/git'
 MASTER = '{{spark_master}}'
