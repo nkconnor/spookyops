@@ -5,6 +5,7 @@ MASTER = '{{spark_master}}'
 c.KernelManager.kernel_cmd = [SPARK_HOME+"/bin/spark-submit",
  "--master", MASTER,
  "--class", "org.tribbloid.isparkserver.ServerMain",
+ "--driver-memory", "8G",
  "--conf", "spark.task.maxFailures=1000",
  "--conf", "spooky.root=s3n://spooky-",
 # "--conf", "spark.speculation=true",
