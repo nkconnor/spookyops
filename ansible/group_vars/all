@@ -2,8 +2,8 @@
 # Variables listed here are applicable to all host groups
 
 spark_root: /opt/spark
-spark_httpdir: http://mirror.csclub.uwaterloo.ca/apache/spark/spark-1.2.0
-spark_subdir: spark-1.2.0-bin-hadoop2.4
+spark_httpdir: http://mirror.csclub.uwaterloo.ca/apache/spark/spark-1.2.1
+spark_subdir: spark-1.2.1-bin-hadoop2.4
 
 spark_tgz: "{{spark_subdir}}.tgz"
 
