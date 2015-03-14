@@ -19,5 +19,5 @@ c.KernelManager.kernel_cmd = [SPARK_HOME+"/bin/spark-submit",
 
 c.NotebookApp.ip = '*'
 c.NotebookApp.open_browser = False
-#c.NotebookApp.password = u'sha1:5dbbfd03bc9a:7f18976f14c5022a67be766f408e07024eecd818'
+c.NotebookApp.password = u'sha1:5dbbfd03bc9a:7f18976f14c5022a67be766f408e07024eecd818'
 c.NotebookApp.port = 8888
