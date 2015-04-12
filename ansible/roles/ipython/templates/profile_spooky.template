@@ -12,7 +12,7 @@ c.KernelManager.kernel_cmd = [SPARK_HOME+"/bin/spark-submit",
 # "--conf", "spark.speculation.interval=10000",
 # "--conf", "spark.speculation.multiplier=10",
  "--conf", "com.amazonaws.sdk.disableCertChecking=true",
- "--executor-memory", "13G", //default for r3.large instance
+ "--executor-memory", "13G",
  "--jars", GIT_HOME+"/spookystuff/shell/target/scala-2.10/spookystuff-shell-assembly-0.3.0-SNAPSHOT.jar",
  GIT_HOME+"/ISpark-server/core/target/scala-2.10/ispark-core-assembly-0.2.0-SNAPSHOT.jar",
  "--profile", "{connection_file}",
