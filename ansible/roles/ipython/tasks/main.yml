@@ -8,13 +8,25 @@
 #tar -xf spark-1.0.0-bin-hadoop1.tgz -C /opt/spark/
 
 - name: install ipython
-  pip: name=ipython[notebook]
+  pip: name=ipython[notebook] state=latest
   tags: ipython
 
-- name: copy profile config file to ipython root directory
-  template: src=profile_spooky.template dest=/home/ubuntu/ owner=ubuntu group=ubuntu
-  tags: spark-worker
+- name: Ensure directory
+  file: path=/home/ubuntu/.ipython/profile_spooky state=directory
+  tags: ipython
 
-- name: copy profile config file to ipython root directory
+- name: copy profile config file to ipython directory
+  template: src=ipython_config.py dest=/home/ubuntu/.ipython/profile_spooky owner=ubuntu group=ubuntu
+  tags: ipython
+
+- name: Ensure directory
+  file: path=/home/ubuntu/.ipython/kernels/spooky state=directory
+  tags: ipython
+
+- name: copy kernelspec file to ipython directory
+  template: src=kernel.json dest=/home/ubuntu/.ipython/kernels/spooky owner=ubuntu group=ubuntu
+  tags: ipython
+
+- name: copy custom css file to ipython root directory
   template: src=custom.css dest=/home/ubuntu/ owner=ubuntu group=ubuntu
-  tags: spark-worker
+  tags: ipython

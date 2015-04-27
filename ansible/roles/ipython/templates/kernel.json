@@ -1,0 +1,31 @@
+{
+  "display_name": "Spooky",
+  "language": "scala",
+  "codemirror_mode": "scala",
+  "env": {
+    "AWS_ACCESS_KEY_ID":"{{AWS_ACCESS_KEY_ID}}",
+    "AWS_SECRET_ACCESS_KEY":"{{AWS_SECRET_ACCESS_KEY}}"
+  },
+  "argv": [
+    "{{spark_home}}/bin/spark-submit",
+    "--master", "{{spark_master}}",
+    "--class", "org.tribbloid.isparkserver.ServerMain",
+    "--driver-memory", "8G",
+    "--executor-memory", "8G",
+    "--conf", "spark.task.maxFailures=1000",
+    "--conf", "spark.shuffle.consolidateFiles=true",
+    "--conf", "spark.shuffle.io.maxRetries=10",
+
+    "--conf", "spark.serializer=org.apache.spark.serializer.KryoSerializer",
+    "--conf", "spark.kryo.registrator=org.tribbloid.spookystuff.SpookyRegistrator",
+    "--conf", "spark.kryoserializer.buffer.max.mb=512",
+
+    "--conf", "spooky.root=s3n://spooky-",
+    "--conf", "spark.executorEnv.com.amazonaws.sdk.disableCertChecking=true",
+
+    "--jars", "/home/ubuntu/git/spookystuff/shell/target/scala-2.10/spookystuff-shell-assembly-0.3.0-SNAPSHOT.jar",
+    "/home/ubuntu/git/ISpark-server/core/target/scala-2.10/ispark-core-assembly-0.2.0-SNAPSHOT.jar",
+    "--profile", "{connection_file}",
+    "--parent"
+  ]
+}

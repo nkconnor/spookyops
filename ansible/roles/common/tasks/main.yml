@@ -5,6 +5,7 @@
   with_items:
     - curl
     - python-pip
+    - python-dev
     - libzmq3
     - python-zmq
     - tor
