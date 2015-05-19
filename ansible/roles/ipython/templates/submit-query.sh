@@ -54,7 +54,7 @@ $SPARK_HOME/bin/spark-submit \
   --conf spark.kryo.registrator=org.tribbloid.spookystuff.SpookyRegistrator \
   --conf spark.kryoserializer.buffer.max.mb=512 \
   \
-  --conf spooky.root=s3n://spooky- \
+  --conf spooky.root=s3a://spooky- \
 #  --conf spooky.preview.mode=preview \
   --conf spark.executorEnv.com.amazonaws.sdk.disableCertChecking=true \
   \
