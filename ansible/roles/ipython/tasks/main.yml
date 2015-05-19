@@ -30,3 +30,7 @@
 - name: copy custom css file to ipython root directory
   template: src=custom.css dest=/home/ubuntu/ owner=ubuntu group=ubuntu
   tags: ipython
+
+- name: copy submit-query file to ipython directory
+  template: src=submit-query.sh dest=/home/ubuntu/ispooky/ owner=ubuntu group=ubuntu
+  tags: ipython

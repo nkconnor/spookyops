@@ -3,7 +3,7 @@
 
 spark_root: /opt/spark
 spark_httpdir: http://mirror.csclub.uwaterloo.ca/apache/spark/spark-1.3.1
-spark_subdir: spark-1.3.1-bin-hadoop2.4
+spark_subdir: spark-1.3.1-bin-hadoop2.6
 
 spark_tgz: "{{spark_subdir}}.tgz"
 
