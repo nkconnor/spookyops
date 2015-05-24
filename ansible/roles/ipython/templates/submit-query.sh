@@ -54,10 +54,11 @@ $SPARK_HOME/bin/spark-submit \
   --conf spark.kryo.registrator=org.tribbloid.spookystuff.SpookyRegistrator \
   --conf spark.kryoserializer.buffer.max.mb=512 \
   \
-  --conf spooky.root=s3a://spooky- \
-#  --conf spooky.preview.mode=preview \
+  --conf spooky.root=s3n://spooky- \
+  --conf spooky.checkpoint=s3://spooky-checkpoint \
+  --conf spooky.preview.mode=no \
   --conf spark.executorEnv.com.amazonaws.sdk.disableCertChecking=true \
   \
-  --jars /home/ubuntu/git/spookystuff/shell/target/scala-2.10/spookystuff-shell-assembly-0.3.0-SNAPSHOT.jar \
+  --jars /home/ubuntu/git/spookystuff/shell/target/scala-2.10/spookystuff-shell-assembly-0.3.0-SNAPSHOT.jar,/home/ubuntu/git/spookystuff/lib/target/scala-2.10/spookystuff-lib-assembly-0.3.0-SNAPSHOT.jar \
   /home/ubuntu/git/Anchorbot-queries/target/scala-$SCALA_VERSION/queries-assembly-0.3.0-SNAPSHOT.jar \
   "$@"
