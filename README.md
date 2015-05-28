@@ -76,7 +76,7 @@ Ansible can't be used to deploy locally (to the machine itself running the scrip
   - tor (required for TOR proxy feature)
   - git (recommended if you want to build SpookyStuff and ISpooky from source code)
   - maven (same as git)
-- [x] install Spark 1.1.1 (with Hadoop 2.4 support) to /opt/spark on all machines
+- [x] install Spark 1.3.1 (with Hadoop 2.4 support) to /opt/spark on all machines
 - [x] add startup script to /etc/init/ to launch Spark master after rebooting master node (optional: can be done manually by executing start-master.sh)
 - [x] add startup script to launch Spark worker to join the cluster after rebooting worker nodes (optional: can be done manually by executing start-worker.sh)
 - [x] install PhantomJS 1.9.8 to /usr/lib/phantomjs/bin on all machines (required for parsing dynamic/AJAX pages)
@@ -114,10 +114,10 @@ sudo apt-get install python-pip python-zmq #(interchangeable with: anaconda)
 
 You can download `spark` from https://spark.apache.org/downloads.html and extract the file
 ```bash
-wget http://d3kbcqa49mib13.cloudfront.net/spark-1.1.1-bin-hadoop1.tgz
-tar -xf spark-1.1.1-bin-hadoop1.tgz
+wget http://d3kbcqa49mib13.cloudfront.net/spark-1.3.1-bin-hadoop2.4.tgz 
+tar -xf spark-1.3.1-bin-hadoop2.4.tgz
 ```
-and add path to `.bash_profile` as follow `export SPARK_HOME=/home/ubuntu/spark-1.1.1-bin-hadoop1`
+and add path to `.bash_profile` as follow `export SPARK_HOME=/home/ubuntu/spark-1.3.1-bin-hadoop2.4`
 
 `This step can be omitted for single-node mode`: simply use 'local[*]' in place of Spark-master URL.
 
